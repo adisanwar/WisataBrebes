@@ -4,15 +4,14 @@ public class itemModel {
     String judul, rating;
     int poster;
     private String deskripsi;
-    double latitude, longitude;
 
-    public itemModel(String judul, String rating, int poster, String deskripsi, double latitude, double longitude) {
+
+    public itemModel(String judul, String rating, int poster, String deskripsi) {
         this.judul = judul;
         this.rating = rating;
         this.poster = poster;
         this.deskripsi = deskripsi;
-        this.latitude = latitude;
-        this.longitude = longitude;
+
 
     }
 
@@ -30,13 +29,5 @@ public class itemModel {
     public String getDeskripsi() {
         return deskripsi;
     }
-    public double getLatitude() {
-        return latitude;
-    }
-
-    public double getLongitude() {
-        return longitude;
-    }
-
 
 }

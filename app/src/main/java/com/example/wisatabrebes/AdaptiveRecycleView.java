@@ -15,9 +15,13 @@ public class AdaptiveRecycleView extends RecyclerView.Adapter<AdaptiveRecycleVie
 
     private ArrayList<itemModel> dataItem;
     private OnItemClickListener mListener;
+    private ArrayList<itemModel> originalData;
+
+
 
     public AdaptiveRecycleView(ArrayList<itemModel> data, OnItemClickListener listener) {
         dataItem = data;
+        originalData = new ArrayList<>(data);
         mListener = listener;
     }
 
@@ -33,6 +37,22 @@ public class AdaptiveRecycleView extends RecyclerView.Adapter<AdaptiveRecycleVie
             imgPoster = itemView.findViewById(R.id.image_poster);
         }
     }
+
+    public void filterData(String query) {
+        query = query.toLowerCase();
+        dataItem.clear();
+        if (query.isEmpty()) {
+            dataItem.addAll(originalData);
+        } else {
+            for (itemModel item : originalData) {
+                if (item.getJudul().toLowerCase().contains(query)) {
+                    dataItem.add(item);
+                }
+            }
+        }
+        notifyDataSetChanged();
+    }
+
 
     public interface OnItemClickListener {
         void onItemClick(itemModel item);
@@ -68,4 +88,3 @@ public class AdaptiveRecycleView extends RecyclerView.Adapter<AdaptiveRecycleVie
         return dataItem.size();
     }
 }
-

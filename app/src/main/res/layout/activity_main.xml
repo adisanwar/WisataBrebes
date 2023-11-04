@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,13 +5,117 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+        <TextView
+            android:id="@+id/titleDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang "
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:padding="10dp"
+            />
 
+        <TextView
+            android:id="@+id/titleDashboard2"
+            android:layout_below="@+id/titleDashboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Para Manusia Butuh Liburan, Ayo Dolan Marang Brebes Kene"
+
+            android:textSize="16dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            />
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_below="@+id/titleDashboard2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Cari wisata..."
+            tools:listitem="@layout/grid_view"
+            />
+
+        <!-- Wisata Popular -->
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="#Kaligua"
+                    android:background="@drawable/button_background"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:radius="8dp"
+                    android:textColor="#ffffff"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="#Canyon"
+                    android:background="@drawable/button_background"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:radius="8dp"
+                    android:textColor="#ffffff"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="#Panenjoan"
+                    android:background="@drawable/button_background"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:radius="8dp"
+                    android:textColor="#ffffff"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="#Malahayu"
+                    android:background="@drawable/button_background"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:radius="8dp"
+                    android:textColor="#ffffff"
+                    android:layout_margin="5dp"/>
+
+        </LinearLayout>
+
+
+
+        <!-- ViewPager2 untuk slider gambar -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/buttonContainer"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Your Text Goes Here"
-        tools:listitem="@layout/grid_view" />
+            android:id="@+id/recycler_view"
+            android:layout_below="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Your Text Goes Here"
+            tools:listitem="@layout/grid_view" />
 
-    <!-- You can add other views or elements here within the RelativeLayout -->
 </RelativeLayout>

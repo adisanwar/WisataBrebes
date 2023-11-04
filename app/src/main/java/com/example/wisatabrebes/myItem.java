@@ -6,7 +6,7 @@ public class myItem {
     };
 
     static String [] judul = {
-            "Agro Wisata Kaligua", "Wisata Malahayu", "Panenjoan : Sunset & Sunrise"
+            "Agro Wisata Kaligua", "Wisata Malahayu", "Panenjoan Salem: Sunset & Sunrise"
             ,"Pasir Gibug", "Ranto Canyon"
     };
 
@@ -38,5 +38,6 @@ public class myItem {
             , "Ranto Canyon Brebes merupakan tempat rekreasi alam yang menyediakan berbagai kegiatan liburan menarik seperti body rafting, cliff jumping atau pun sekadar berenang dengan background menakjubkan. Objek wisata ini berupa ngarai dengan air terjun yang alirannya berasal dari Sungai Windusari. Tempat ini cocok dikunjungi bagi Anda yang merindukan suasana alam asri nan memesona untuk menghilangkan penat."
     };
 
-    static double []
+
+
 }
