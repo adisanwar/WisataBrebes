@@ -38,12 +38,25 @@ public class DescriptionActivity extends AppCompatActivity {
 
     }
 
+//    public void onShowMapClick(View view) {
+//        String lokasi = getIntent().getStringExtra("judul"); // Get the location title from the intent
+//
+//
+//        Intent mapIntent = new Intent(android.content.Intent.ACTION_VIEW, gmmIntentUri);
+//        mapIntent.setPackage("com.google.android.apps.maps");
+//        startActivity(mapIntent);
+//    }
+
     public void onShowMapClick(View view) {
         String lokasi = getIntent().getStringExtra("judul"); // Get the location title from the intent
 
-        Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode(lokasi));
-        Intent mapIntent = new Intent(android.content.Intent.ACTION_VIEW, gmmIntentUri);
-        mapIntent.setPackage("com.google.android.apps.maps");
+        // Create an intent to open the MapActivity
+        Intent mapIntent = new Intent(this, MapActivity.class);
+
+        // Pass the location title as an extra to the MapActivity
+        mapIntent.putExtra("judul", lokasi);
+
+        // Start the MapActivity
         startActivity(mapIntent);
     }
 

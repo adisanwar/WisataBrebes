@@ -65,6 +65,10 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"/>
 
+<!--        <WebView-->
+<!--            android:id="@+id/web_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
 
     </ScrollView>
 </LinearLayout>
