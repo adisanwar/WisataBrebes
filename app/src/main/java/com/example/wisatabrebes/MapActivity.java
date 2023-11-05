@@ -1,5 +1,6 @@
 package com.example.wisatabrebes;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -11,6 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 public class MapActivity extends AppCompatActivity {
     private WebView webView;
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,8 @@ public class MapActivity extends AppCompatActivity {
 
         // Atur judul pada Toolbar
         getSupportActionBar().setTitle("Peta Lokasi");
+
+
 
         webView = findViewById(R.id.webView);
 

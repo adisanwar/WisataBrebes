@@ -21,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Para Manusia Butuh Liburan, Ayo Dolan Marang Brebes Kene"
-
             android:textSize="16dp"
             android:paddingLeft="10dp"
             android:paddingRight="30dp"
